@@ -1,0 +1,9 @@
+{
+  "author": "liangwei",
+  "demoUrl": "http://jdc.jd.com/demo/ambient/sina_wave/",
+  "title": "sina_wave",
+  "github": "https://github.com/o2team-ambient/sina_wave",
+  "demoSnippet": "{{__snippet__}}",
+  "controlUrl": "{{__control__}}",
+  "configUrl": "{{__config__}}"
+}

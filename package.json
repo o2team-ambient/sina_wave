@@ -1,0 +1,16 @@
+{
+  "name": "sina_wave",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "am s",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "liangwei",
+  "license": "ISC",
+  "dependencies": {
+    "@o2team/ambient-dat.gui": "^0.7.7",
+    "sine-waves": "^0.3.0"
+  }
+}
