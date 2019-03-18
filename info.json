@@ -5,7 +5,7 @@
   "title": "sina_wave",
   "ambName": "波浪",
   "github": "https://github.com/o2team-ambient/sina_wave",
-  "demoSnippet": "<link href=\"//storage.jd.com/ambient/styles-sina_wave.css?t=1552896029000\" rel=\"stylesheet\"></link><!-- S 主体内容 -->\n  <div class=\"o2team_ambient_main\">\n    <canvas></canvas>\n  </div>\n  <!-- E 主体内容 --><script src=\"//storage.jd.com/ambient/bundle-sina_wave.js?t=1552896029000\"></script>",
-  "controlUrl": "//storage.jd.com/ambient/control-sina_wave.js?t=1552896029000",
-  "configUrl": "//storage.jd.com/ambient/config-sina_wave.js?t=1552896029000"
+  "demoSnippet": "<link href=\"//storage.jd.com/ambient/styles-sina_wave.css?t=1552910230000\" rel=\"stylesheet\"></link><!-- S 主体内容 -->\n  <div class=\"o2team_ambient_main\">\n    <canvas></canvas>\n  </div>\n  <!-- E 主体内容 --><script src=\"//storage.jd.com/ambient/bundle-sina_wave.js?t=1552910230000\"></script>",
+  "controlUrl": "//storage.jd.com/ambient/control-sina_wave.js?t=1552910230000",
+  "configUrl": "//storage.jd.com/ambient/config-sina_wave.js?t=1552910230000"
 }

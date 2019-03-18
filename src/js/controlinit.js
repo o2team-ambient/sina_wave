@@ -53,24 +53,12 @@ let controlInit = () => {
       }
       gui.add(otherConfig, 'message').name('配置面板')
       gui.add(otherConfig, 'play').name('播放 / 暂停')
-      gui.add(config, 'width').name('粒子散播宽度').onFinishChange(val => {
-        window[O2_AMBIENT_MAIN].update(config)
-      })
-      gui.add(config, 'height').name('粒子散播高度').onFinishChange(val => {
-        window[O2_AMBIENT_MAIN].update(config)
-      })
-      this.controls['speed'] = gui.add(config, 'speed', 1, 20).name('波浪速度').onFinishChange(val => {
-        window[O2_AMBIENT_MAIN].update(config)
-      })
-      this.controls['rotate'] = gui.add(config, 'rotate', 0, 360).name('旋转角度').onFinishChange(val => {
-        window[O2_AMBIENT_MAIN].update(config)
-      })
-      this.controls['ease'] = gui.add(config, 'ease', ['Linear', 'SineIn', 'SineOut', 'SineInOut']).name('缓动函数').onFinishChange(val => {
-        window[O2_AMBIENT_MAIN].update(config)
-      })
-      this.controls['waveWidth'] = gui.add(config, 'waveWidth', 1, 100).name('波浪宽度').onFinishChange(val => {
-        window[O2_AMBIENT_MAIN].update(config)
-      })
+      gui.add(config, 'width').name('粒子散播宽度')
+      gui.add(config, 'height').name('粒子散播高度')
+      this.controls['speed'] = gui.add(config, 'speed', 1, 20).name('波浪速度')
+      this.controls['rotate'] = gui.add(config, 'rotate', 0, 360).name('旋转角度')
+      this.controls['ease'] = gui.add(config, 'ease', ['Linear', 'SineIn', 'SineOut', 'SineInOut']).name('缓动函数')
+      this.controls['waveWidth'] = gui.add(config, 'waveWidth', 1, 100).name('波浪宽度')
       gui.add(otherConfig, 'random').name('随机配置')
       gui.add(otherConfig, 'addWave').name('增加波浪')
 
@@ -125,7 +113,7 @@ let controlInit = () => {
       wavesConfig.random = this.randomWave.bind(this, this.waveCount)
       wavesFolder.add(wavesConfig, 'random').name('随机配置')
 
-      window[O2_AMBIENT_MAIN].update(this.config)
+      // window[O2_AMBIENT_MAIN].update(this.config)
     }
 
     randomData() {

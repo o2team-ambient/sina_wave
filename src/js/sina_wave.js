@@ -48,7 +48,7 @@ class SineWaves {
     })
   }
 
-  update (newOptions) {
+  reset (newOptions) {
     this.opts = newOptions
     let realWidth = document.documentElement.clientWidth
     let realHeight = document.documentElement.clientHeight
