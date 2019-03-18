@@ -45,10 +45,10 @@ let controlInit = () => {
       const otherConfig = this.otherConfig
       const gui = new dat.GUI()
       gui.addCallbackFunc(this.resetCanvas.bind(this))
-      config.random = () => {
+      otherConfig.random = () => {
         this.randomData()
       }
-      config.addWave = () => {
+      otherConfig.addWave = () => {
         this.addWaveFolder()
       }
       gui.add(otherConfig, 'message').name('配置面板')
@@ -71,8 +71,8 @@ let controlInit = () => {
       this.controls['waveWidth'] = gui.add(config, 'waveWidth', 1, 100).name('波浪宽度').onFinishChange(val => {
         window[O2_AMBIENT_MAIN].update(config)
       })
-      gui.add(config, 'random').name('随机配置')
-      gui.add(config, 'addWave').name('增加波浪')
+      gui.add(otherConfig, 'random').name('随机配置')
+      gui.add(otherConfig, 'addWave').name('增加波浪')
 
       this.isShowController && !this.isAmbientPlat && gui.addColor(otherConfig, 'backgroundColor').name('背景色(仅演示)').onFinishChange(val => {
         this.setBackgroundColor(val)
@@ -137,7 +137,6 @@ let controlInit = () => {
     }
 
     randomWave(key) {
-      console.log(key, this.wavesControl)
       const controllerMap = this.wavesControl[key]
       controllerMap['timeModifier'].setValue(getRandom(1, 5))
       controllerMap['lineWidth'].setValue(getRandom(1, 5))
