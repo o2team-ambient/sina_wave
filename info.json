@@ -1,7 +1,7 @@
 {
   "author": "liangwei",
-  "demoUrl": "http://jdc.jd.com/demo/ambient/sina_wave/",
-  "miniDemoUrl": "http://jdc.jd.com/demo/ambient/sina_wave/index_demo.html",
+  "demoUrl": "//o2team-ambient.github.io/sina_wave/dist/",
+  "miniDemoUrl": "//o2team-ambient.github.io/sina_wave/dist/index_demo.html",
   "title": "sina_wave",
   "ambName": "波浪",
   "github": "https://github.com/o2team-ambient/sina_wave",
