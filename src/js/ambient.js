@@ -1,3 +1,4 @@
+import Report from '@o2team/ambient-report'
 import './utils/raf'
 import {
   O2_AMBIENT_MAIN,
@@ -36,3 +37,6 @@ try {
 } catch (e) {
   console.log(e) 
 }
+
+Report.init({})
+Report.processPV()
