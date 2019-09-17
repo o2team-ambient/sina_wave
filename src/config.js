@@ -1,19 +1,18 @@
 import { O2_AMBIENT_CONFIG } from './js/utils/const'
 window[O2_AMBIENT_CONFIG] = {
-  width: 1960,
-  height: 1120,
+  width: window.innerWidth,
+  height: window.innerHeight,
   speed: 8,
   rotate: 0,
-  ease: 'SineOut',
+  ease: 'SineInOut',
   waveWidth: 100,
   waves: [{
-    timeModifier: 1,   // This is multiplied againse `speed`
-    lineWidth: 3,      // Stroke width
-    amplitude: 150,    // How tall is the wave
-    wavelength: 200,   // How long is the wave
-    segmentLength: 20, // How smooth should the line be
+    timeModifier: 4, // This is multiplied againse `speed`
+    lineWidth: 1, // Stroke width
+    amplitude: -25, // How tall is the wave
+    wavelength: 25, // How long is the wave
     strokeStyle: 'rgba(0, 0, 0, 0.5)', // Stroke color and opacity
-    type: 'sine'       // Wave type
+    type: 'sine' // Wave type
   }, {
     timeModifier: 1,
     lineWidth: 2,

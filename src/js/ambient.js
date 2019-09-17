@@ -16,11 +16,7 @@ wrapper.addEventListener('click', () => {
 // 初始化函数
 function initAmbient () {
   const opts = window[O2_AMBIENT_CONFIG]
-  const canvas = document.createElement('canvas')
-  canvas.style = 'pointer-events: none; position:fixed; top:0; left:50%; transform: translateX(-50%); max-width: 100%; height: 300px; z-index: 1'
-  canvas.id = 'sine_wave_canvas'
-  document.body.appendChild(canvas)
-  let sinaWave = new SinaWave(canvas, opts)
+  let sinaWave = new SinaWave(document.getElementById('sinewaves'), opts)
   window[O2_AMBIENT_MAIN] = sinaWave
 }
 

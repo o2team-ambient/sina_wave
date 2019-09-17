@@ -30,6 +30,10 @@ class SineWaves {
       // Canvas Element
       el: this.el,
 
+      width: this.width,
+
+      height: this.height,
+
       // General speed of entire wave system
       speed,
 
