@@ -22,10 +22,43 @@ class SineWaves {
   }
 
   init () {
-    const { speed, rotate, ease, waveWidth, waves } = this.opts
+    const {
+      speed,
+      rotate,
+      ease,
+      wavesWidth,
+      waves,
+      initialize,
+      resizeEvent,
+    } = this.opts
+
     this.el.style.width = `${this.width}px`
     this.el.style.height = `${this.height}px`
     this.isPlay = true
+
+    let extendsObj = {}
+    if (initialize) {
+      extendsObj.initialize = () => {
+        typeof initialize === 'function' && initialize()
+        if (typeof initialize === 'string') {
+          try {
+            eval(`(${decodeURI(initialize)})()`)
+          } catch(e) {}
+        }
+      }
+    }
+
+    if (resizeEvent) {
+      extendsObj.resizeEvent = () => {
+        typeof resizeEvent === 'function' && resizeEvent()
+        if (typeof resizeEvent === 'string') {
+          try {
+            eval(`(${decodeURI(resizeEvent)})()`)
+          } catch(e) {}
+        }
+      }
+    }
+  
     this.waves = new sinewaves({
       // Canvas Element
       el: this.el,
@@ -45,7 +78,7 @@ class SineWaves {
 
       // Specific how much the width of the canvas the waves should be
       // This can either be a number or a percent
-      waveWidth: `${waveWidth}%`,
+      wavesWidth: `${wavesWidth}%`,
 
       // An array of wave options
       waves
@@ -53,6 +86,7 @@ class SineWaves {
   }
 
   reset (newOptions) {
+    this.waves.running = false
     this.opts = newOptions
     let realWidth = document.documentElement.clientWidth
     let realHeight = document.documentElement.clientHeight
@@ -66,7 +100,6 @@ class SineWaves {
     }
     this.width = canvasWidth
     this.height = canvasHeight
-    this.waves.running = false
     this.waves = null
     this.init()
   }

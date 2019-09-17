@@ -1,5 +1,5 @@
 function getRandom (min, max) {
-  return (Math.random() * (max - min)) + min
+  return parseInt((Math.random() * (max - min)) + min)
 }
 
 function getRandomInt (min, max) {

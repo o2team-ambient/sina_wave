@@ -17,6 +17,8 @@ const isShowController = getParameterByName('controller') // 是否展示控制�
 const isAmbientPlat = getParameterByName('platform') === '1' // 是否平台环境
 
 class Controller {
+  ts
+
   constructor () {
     this.config = window[O2_AMBIENT_CONFIG] || {}
     this.isShowController = isShowController
@@ -89,15 +91,19 @@ class Controller {
 
   // 重置画布
   resetCanvas() {
-    if (this.isAmbientPlat) {
-      this.transferProcess()
-      
-      if (window[O2_AMBIENT_IS_CONFIG_RESET]) return
-      window[O2_AMBIENT_IS_CONFIG_RESET] = true
-
-      return
-    }
-    window[O2_AMBIENT_MAIN] && window[O2_AMBIENT_MAIN].reset && typeof window[O2_AMBIENT_MAIN].reset === 'function' && window[O2_AMBIENT_MAIN].reset(window[O2_AMBIENT_CONFIG])
+    if (this.ts) return
+    if (!this.ts) this.ts = setTimeout(() => {
+      this.ts = 0
+      if (this.isAmbientPlat) {
+        this.transferProcess()
+        
+        if (window[O2_AMBIENT_IS_CONFIG_RESET]) return
+        window[O2_AMBIENT_IS_CONFIG_RESET] = true
+  
+        return
+      }
+      window[O2_AMBIENT_MAIN] && window[O2_AMBIENT_MAIN].reset && typeof window[O2_AMBIENT_MAIN].reset === 'function' && window[O2_AMBIENT_MAIN].reset(window[O2_AMBIENT_CONFIG])
+    }, 200)
   }
 }
 
