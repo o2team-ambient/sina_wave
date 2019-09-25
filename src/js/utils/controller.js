@@ -70,6 +70,12 @@ class Controller {
   // 传送数据
   transMsg (dom) {
     let transWin = dom.contentWindow
+    window[O2_AMBIENT_CONFIG].waves = window[O2_AMBIENT_CONFIG].waves.map(item => {
+      return {
+        ...item,
+        random: null
+      }
+    })
     transWin.postMessage({
       type: 'reset',
       data: window[O2_AMBIENT_CONFIG]

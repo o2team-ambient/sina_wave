@@ -37,6 +37,10 @@ class SineWaves {
     this.isPlay = true
 
     let extendsObj = {}
+    let wavesArr = waves.map(item => {
+      return {...item}
+    })
+
     if (initialize) {
       extendsObj.initialize = () => {
         typeof initialize === 'function' && initialize()
@@ -81,7 +85,7 @@ class SineWaves {
       wavesWidth: `${wavesWidth}%`,
 
       // An array of wave options
-      waves
+      waves: wavesArr
     })
   }
 
