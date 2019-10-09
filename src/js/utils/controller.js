@@ -18,6 +18,7 @@ const isAmbientPlat = getParameterByName('platform') === '1' // 是否平台环�
 
 class Controller {
   ts
+  msgTs
 
   constructor () {
     this.config = window[O2_AMBIENT_CONFIG] || {}
@@ -45,8 +46,12 @@ class Controller {
   bindMsg () {
     window.addEventListener('message', (msg) => {
       if (msg.data.type !== 'reset') return
-      window[O2_AMBIENT_CONFIG] = Object.assign(window[O2_AMBIENT_CONFIG], msg.data.data)
-      this.resetCanvas()
+      if (this.msgTs) return
+      this.msgTs = setTimeout(() => {
+        this.msgTs = null
+        window[O2_AMBIENT_CONFIG] = Object.assign(window[O2_AMBIENT_CONFIG], msg.data.data)
+        this.resetCanvas()
+      }, 200)
     })
   }
 

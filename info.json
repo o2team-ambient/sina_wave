@@ -5,9 +5,9 @@
   "title": "sina_wave",
   "ambName": "波浪",
   "github": "https://github.com/o2team-ambient/sina_wave",
-  "demoSnippet": "<link href=\"//storage.jd.com/ambient/styles-sina_wave.css?t=1569398853000\" rel=\"stylesheet\"></link><!-- S 主体内容 -->\n  <div class=\"o2team_ambient_main\">\n    <canvas id=\"sinewaves\"></canvas>\n  </div>\n  <!-- E 主体内容 --><script src=\"//storage.jd.com/ambient/bundle-sina_wave.js?t=1569398853000\"></script>",
-  "controlUrl": "//storage.jd.com/ambient/control-sina_wave.js?t=1569398853000",
-  "configUrl": "//storage.jd.com/ambient/config-sina_wave.js?t=1569398853000",
+  "demoSnippet": "<link href=\"//storage.jd.com/ambient/styles-sina_wave.css?t=1570616873000\" rel=\"stylesheet\"></link><!-- S 主体内容 -->\n  <div class=\"o2team_ambient_main\">\n    <canvas id=\"sinewaves\"></canvas>\n  </div>\n  <!-- E 主体内容 --><script src=\"//storage.jd.com/ambient/bundle-sina_wave.js?t=1570616873000\"></script>",
+  "controlUrl": "//storage.jd.com/ambient/control-sina_wave.js?t=1570616873000",
+  "configUrl": "//storage.jd.com/ambient/config-sina_wave.js?t=1570616873000",
   "placeholderImg": "//storage.jd.com/ambient/sina_wave_placeholder.png?t=1554260508000",
   "gifImg": "//storage.jd.com/ambient/sina_wave_motion.gif?t=1553781489000",
   "spriteImg": "//storage.jd.com/ambient/sina_wave_sprite.png?t=1554260508000"
